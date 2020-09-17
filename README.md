@@ -1,1 +1,1 @@
-# Move to https://github.com/v2fly/v2fly-github-io
+Translated V2Ray manual.
