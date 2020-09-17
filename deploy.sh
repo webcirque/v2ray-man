@@ -25,12 +25,12 @@ build_dir vi
 
 TARGET_DIR=_v2ray_com
 
-git clone "https://github.com/v2ray/v2ray.github.io.git" ${TARGET_DIR}
+git clone "https://github.com/webcirque/v2ray-man.git" ${TARGET_DIR}
 
 rm -rf ${TARGET_DIR}/*
-cp -r ./zh_cn/_book/* ${TARGET_DIR}/
+cp -r ./zh_cn/_book/* ${TARGET_DIR}/zh_cn
 mkdir ${TARGET_DIR}/en/
-cp -r ./en/_book/* ${TARGET_DIR}/en/
+cp -r ./en/_book/* ${TARGET_DIR}/
 mkdir ${TARGET_DIR}/ru/
 cp -r ./ru/_book/* ${TARGET_DIR}/ru/
 mkdir ${TARGET_DIR}/ko/
@@ -45,10 +45,10 @@ cp robots.txt ${TARGET_DIR}/
 cp -r ./resources/* ${TARGET_DIR}/resources/
 
 pushd ${TARGET_DIR}
-git config user.name "V2Ray Auto Build"
-git config user.email "love@v2ray.com"
+git config user.name "Auto build"
+git config user.email "webcirque@gmail.com"
 
 git add -A
 git commit -m 'update'
-git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
+git push "https://${GITHUB_TOKEN}@github.com/webcirque/v2ray-man.git" master
 popd
